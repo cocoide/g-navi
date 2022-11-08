@@ -19,14 +19,14 @@ export const useUserFormState = (): string => {
   return useRecoilValue(userFormState)
 }
 
-interface UseUserFormMutatorType {
+interface useUserFormMutatorType {
   setSearchWord: (x: string) => void
 }
 
 /**
  * @description ユーザーが入力したキーワードをセットする関数
  */
-export const useUserFormMutator = (): UseUserFormMutatorType => {
+export const useUserFormMutator = (): useUserFormMutatorType => {
   const setState: SetterOrUpdater<string> = useSetRecoilState(userFormState)
   const setSearchWord = useCallback(
     (x: string) => {
