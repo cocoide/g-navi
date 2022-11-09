@@ -14,7 +14,13 @@ export default function ShopPage() {
     // )
 
     if (error) return <div>Failed to load user</div>
-    if (!data) return <div>Loading...</div>
+    if (!data) return (
+        <div className="flex justify-center place-items-center">
+            <div className="animate-spin h-10 w-10 border-4 bg-indigo-400 rounded-full border-t-transparent">
+                あ
+            </div>
+        </div>
+    )
 
     return (
         <>
