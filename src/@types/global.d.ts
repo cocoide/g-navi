@@ -9,12 +9,13 @@
     name: string
     station_name: string
     genre: {
-      name: string
+      name: ReactNode
       catch: string
     }
   }
   
   interface HotpepperResponseType {
+    name: ReactNode
     results: {
       shop: ShopObj[]
     }

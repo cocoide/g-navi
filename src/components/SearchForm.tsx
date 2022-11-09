@@ -46,7 +46,8 @@ export const SearchForm: FC<SearchFormProps> = ({ userSetKeyword, fallbackData }
     return (
         <>
             <form ref={formRef} onSubmit={handlerOnSubmitSearch} className="flex flex-raw justify-center bg-slate-200 mx-20 drop-shadow-md  outline outline-1 outline-slate-300">
-                <input className="w-full h-10 p-3 m-1 bg-transparent text-center rounded-sm"
+                <input className="w-full h-10 p-3 m-1 bg-transparent text-center rounded-sm
+               shadow-none ring-9"
                     type="search" name="seachWord" placeholder="キーワードを入力" />
                 <button className='my-1 mr-1'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
