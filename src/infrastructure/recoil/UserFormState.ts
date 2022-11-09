@@ -29,10 +29,7 @@ interface useUserFormMutatorType {
 export const useUserFormMutator = (): useUserFormMutatorType => {
   const setState: SetterOrUpdater<string> = useSetRecoilState(userFormState)
   const setSearchWord = useCallback(
-    (x: string) => {
-      setState(x)
-    },
-    [setState]
+    (x: string) => {setState(x)}, [setState]
   )
 
   return { setSearchWord }
