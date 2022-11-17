@@ -1,4 +1,4 @@
-import { FC, RefObject, SyntheticEvent, useRef } from 'react'
+import { FC, RefObject, SyntheticEvent, useRef, useState } from 'react'
 import { useUserFormMutator } from '../infrastructure/recoil/UserFormState'
 import { useShopDataSWR } from '../infrastructure/UseShopDataSRW'
 import { fetcher } from '../libs/fetcher'
@@ -42,7 +42,7 @@ export const SearchForm: FC<SearchFormProps> = ({ userSetKeyword, fallbackData }
             throw error
         })
     }
-
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <>
             <form ref={formRef} onSubmit={handlerOnSubmitSearch} className="flex flex-raw justify-center place-items-center
