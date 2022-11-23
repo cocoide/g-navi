@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import useSWR from "swr"
+import Loading from '../../components/Loading'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
@@ -15,10 +16,7 @@ export default function ShopPage() {
 
     if (error) return <div>Failed to fetch shop data</div>
     if (!data) return (
-        <div className="flex justify-center place-items-center
-        animate-pulse">
-            <div className="w-screen h-screen rounded-md p-5 bg-slate-300"></div>
-        </div>
+        <Loading />
     )
 
     return (

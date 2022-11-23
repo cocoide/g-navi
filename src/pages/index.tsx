@@ -19,7 +19,7 @@ const Home: FC<Props> = ({ fallbackData }) => {
   // getStaticProps からの fallbackDataを初期値に持つ。
   // クライアント側でのデータフェッチを行う。
   const { data } = useShopDataSWR(userSetKeyword, fallbackData)
-  const router = useRouter
+  const router = useRouter();
 
 
   return (
@@ -67,9 +67,10 @@ const Home: FC<Props> = ({ fallbackData }) => {
                     <br />
                     {shopData.genre.catch}
                   </p>
-                  <Link
-                    href={`/shop/${shopData.id}`}
-                  >詳しく</Link>
+                  <button
+                    onClick={() => router.push(`/shop/${shopData.id}`)}
+                    className="bg-slate-200 drop-shadow p-1 rounded-md"
+                  >詳しく</button>
                 </div>
               )
             })

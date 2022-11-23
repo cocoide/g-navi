@@ -8,7 +8,7 @@ import { atom, SetterOrUpdater, useRecoilValue, useSetRecoilState } from 'recoil
  * @description ユーザーが入力したキーワードを定義するAtom
  */
 export const userFormState = atom<string>({
-  key: 'UserInputKeyword',
+  key: 'userInputKeyword',
   default: ''
 })
 
